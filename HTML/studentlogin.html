@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OneDesk-Student Log in</title>
+  <link rel="stylesheet" href="../css/UImain.css" />
+</head>
+
+<body>
+
+  <nav class="level pt-6">
+    <div class="level-item">
+      <figure class="image" style="height: 30px;">
+        <a href="../index.html"><img src="../assets/1x/Asset 1.png" alt=""></a>
+      </figure>
+    </div>
+  </nav>
+
+
+  <div class="columns pt-4 is-centered">
+    <div class="column is-4">
+
+      <div class="tile is-parent ">
+
+        <div class="tile is-child box">
+
+          <h1 class="is-family-sans-serif has-text-weight-bold is-size-3 has-text-centered mb-6">Student Log In</h1>
+          <form action="../php/userlogin.php" method="POST">
+            <div class="field">
+              <label for="" class="label has-text-grey-dark"> Enter User Details </label>
+              <div class="control">
+                <input type="email" class="input" placeholder="Enter Email Id" name="email" />
+              </div>
+            </div>
+            <div class="field">
+              <label for="" class="label has-text-grey-dark">Password</label>
+              <div class="control">
+                <input type="password" class="input" placeholder="Enter Your Password" name="pass" />
+              </div>
+            </div>
+
+
+            <div class="level mt-6">
+              <div class="level-item">
+                <button class="button is-primary has-text-weight-semibold" type="submit" name="submit">Log In</button>
+              </div>
+            </div>
+          </form>
+          <br>
+          <br>
+          <p class="has-text-centered is-size-6"> haven't registered yet? <a href="registration.html">Register Here</a> </p>
+
+
+        </div>
+        
+      </div>
+    </div>
+      
+  </div>
+  </div>
+</body>
+
+</html>

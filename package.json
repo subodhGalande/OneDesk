@@ -1,0 +1,19 @@
+{
+  "name": "onedeskui",
+  "version": "1.0.0",
+  "description": "",
+  "main": "BulmaUI.scss",
+  "license": "MIT",
+  "devDependencies": {
+    "bulma": "^0.9.0",
+    "node-sass": "^4.14.1"
+  },
+  "scripts": {
+    "css-build": "node-sass --omit-source-map-url BulmaUI.scss css/BulmaUI.css",
+    "css-watch": "npm run css-build -- --watch",
+    "start": "npm run css-watch"
+  },
+  "dependencies": {
+    "sweetalert": "^2.1.2"
+  }
+}

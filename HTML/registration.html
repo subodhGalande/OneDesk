@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OneDesk-Registration</title>
+  <link rel="stylesheet" href="../css/UImain.css" />
+  <script type="text/javascript">
+    function validateForm() {
+      var a = document.forms["reg"]["username"].value;
+      var b = document.forms["reg"]["email"].value;
+      var c = document.forms["reg"]["contact"].value;
+      var d = document.forms["reg"]["rollno"].value;
+      var e = document.forms["reg"]["password"].value;
+
+      if ((a == null || a == "") && (b == null || b == "") && (c == null || c == "") && (d == null || d == "") && (e == null || e == "")) {
+        alert("All Field must be filled out");
+        return false;
+      }
+      if (a == null || a == "") {
+        alert(" username must be entered");
+        return false;
+      }
+      if (b == null || b == "") {
+        alert("email must be entered");
+        return false;
+      }
+      if (c == null || c == "" && c != NaN) {
+        alert("contact number must be filled");
+        return false;
+      }
+      if (d == null || d == "") {
+        alert("enrollment number must be filled");
+        return false;
+      }
+      if (e == null || e == "") {
+        alert("password must be filled out");
+        return false;
+      }
+
+    }
+  </script>
+</head>
+
+<body>
+
+  <nav class="level pt-6">
+    <div class="level-item">
+      <figure class="image" style="height: 30px;">
+       <a href="../index.html"> <img src="../assets/1x/Asset 1.png" alt=""> </a>
+      </figure>
+    </div>
+  </nav>
+
+
+  <div class="columns pt-4 is-centered">
+    <div class="column is-4">
+
+      <div class="tile is-parent ">
+
+        <div class="tile is-child box">
+
+          <h1 class="is-family-sans-serif is-size-3 has-text-weight-bold has-text-centered mb-6">Registration</h1>
+          <form action="../php/registration.php" name="reg" method="POST" onsubmit="return validateForm()">
+            <div class="field">
+              <label for="" class="label has-text-grey-dark"> Your Name</label>
+              <div class="control">
+                <input type="text" class="input" placeholder="Enter Your Name" name="username" />
+              </div>
+            </div>
+            <div class="field">
+              <label for="" class="label has-text-grey-dark"> E-mail Address</label>
+              <div class="control">
+                <input type="email" class="input" placeholder="Enter Your E-mail Address" name="email" />
+              </div>
+            </div>
+            <div class="field">
+              <label for="" class="label has-text-grey-dark"> Contact Number</label>
+              <div class="control">
+                <input type="tel" pattern="[0-9]{10}" class="input" placeholder="Enter Your Contact no." name="contact" />
+              </div>
+            </div>
+            <div class="field">
+              <label for="" class="label has-text-grey-dark">Enrollment Number</label>
+              <div class="control">
+                <input type="text" class="input"  placeholder="Enter Your College Enrollment no." name="rollno" />
+              </div>
+            </div>
+            <div class="field">
+              <label for="" class="label has-text-grey-dark">Password</label>
+              <div class="control">
+                <input type="password" class="input" placeholder="Enter your password" name="password" />
+              </div>
+            </div>
+            <div class="field is-hidden">
+              <label for="" class="label has-text-grey-dark">role</label>
+              <div class="control">
+                <input type="text" class="input" value="student" placeholder="Enter your password" name="role" />
+              </div>
+            </div>
+
+            <div class="level mt-6">
+              <div class="level-item">
+                <button class="button is-primary has-text-weight-semibold" type="submit" name="register">Submit</button>
+              </div>
+            </div>
+
+          </form>
+
+
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+  </div>
+</body>
+
+</html>
